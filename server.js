@@ -121,12 +121,11 @@ const server = http.createServer((req, res) => {
     fs.writeFileSync(DATA_FILE, JSON.stringify(users, null, 2));
 
     res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ message: "User deleted" }));
+    res.end(JSON.stringify({ message: "User deteled" }));
     return;
-  }
+  }    
 
-  
-  res.writeHead(404, { "Content-Type": "application/json" });
+   res.writeHead(404, { "Content-Type": "application/json" });
   res.end(JSON.stringify({ message: "Route not found" }));
 });
 
