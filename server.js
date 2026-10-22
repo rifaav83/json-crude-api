@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
 
     if (!user) {
       res.writeHead(404, { "Content-Type": "application/json" });
-      res.end(JSON.stringify({ message: "User not found" }));
+      res.end(JSON.stringify({ message: "User not  found" }));
       return;
     }
 
@@ -106,7 +106,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  
   if (req.method === "DELETE" && req.url.startsWith("/users/")) {
     const id = req.url.split("/")[2];
     const index = users.findIndex(u => u.id === id);
@@ -130,6 +129,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on  port ${PORT}`); 
+
 });
 
